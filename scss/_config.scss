@@ -1,0 +1,53 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+// this is for variables
+$concert-one: 'Concert One', cursive;
+$primary-color: #14213d;
+$secondary-color: #fca311;
+
+// these our are resets which could also be modularized
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// this is a mixin, which is like a function, to create a transition that we can use all across the website
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+// now we make a function to set the appropriate color of our text
+// in Sass, we use @ before what would be considered keywords in JS
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+// @mixin auroral-container() {
+//   position: absolute;
+//   left: -50%;
+//   top: -50%;
+//   width: 200%;
+//   height: 200%;
+// }

@@ -1,0 +1,50 @@
+// imports don't need extension or underscore!
+// one of the only things you do need to remember to import into main.scss are the partials, which themselves do not need to explicitly get exported because they get compiled together by Sass
+// THE ORDER IN WHICH YOU IMPORT HERE ***APPARENTLY*** MATTERS!!!
+@import 'config';
+@import 'menu';
+@import 'vocab';
+@import 'responsive';
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: $concert-one;
+  line-height: 1;
+}
+
+// title
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  // rem is based on the font size of the body, whose default size is 16px; 1rem is 1 times 16 so 16px
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+}

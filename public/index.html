@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Defines the character set, MDN recommends putting this right after <head> tag-->
+    <meta charset="UTF-8" />
+    <script async defer src="/bundle.js"></script>
+    <!--responsive design-->
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>ᓀᐦᐃᔭᐃᐧ ᑭᐢᑭᓇᐧᐦᐊᒫᑯᓯᐤ Let's Learn Cree</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- this menu button is basically a wrapper which will be our click-event; it will contain the 3 bars to make the hamburger button -->
+      <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a
+              href="http://dictionary.plainscree.atlas-ling.ca/#/help"
+              class="menu-nav__link"
+            >
+              Plains Cree Dictionary
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a
+              href="https://plainscree.atlas-ling.ca/grammar/"
+              class="menu-nav__link"
+            >
+              Plains Cree Grammar
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a
+              href="https://plainscree.atlas-ling.ca/syllabic-convertor/"
+              class="menu-nav__link"
+            >
+              Syllabic Convertor
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="https://www.atlas-ling.ca/" class="menu-nav__link">
+              Algonguian Linguistic Atlas
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="http://www.scfn.ca/" class="menu-nav__link">
+              Sucker Creek First Nation
+            </a>
+          </li>
+          <li class="menu-nav__item">
+            <a
+              href="http://powertothepeople.tv/cr/about/"
+              class="menu-nav__link"
+            >
+              Power To The People
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- from index.js -->
+    <div id="app"></div>
+
+    <main>
+      <section class="vocab">
+        <div class="vocab__syllabics-image">
+          <h1 class="text-secondary">ᓀᐦᐃᔭᐁᐧᐃᐧᐣ nêhiýawêwin Plains Cree</h1>
+        </div>
+
+        <div class="vocab__words">
+          <div class="vocab__word">
+            <img src="img/hello.jpg" alt="Hello" />
+            <div class="vocab__btns">
+              <!-- makes the links not go anyway -->
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-feather-alt"></i> ᑖᓂᓯ
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-language"></i> tânisi
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-font"></i> Hello / How are you?
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <img src="img/whats-your-name.png" alt="What's your name?" />
+            <div class="vocab__btns">
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-feather-alt"></i> ᐊᐄᐧᓇ ᑭᔭ ?
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-language"></i> awîna kiýa?
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-font"></i> What's your name?
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <img src="img/my-name-is.jpg" alt="My name is" />
+            <div class="vocab__btns">
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-feather-alt"></i> ᓂᓯᐦᑲᓱᐣ...
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-language"></i> nisihkason...
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-font"></i> My name is...
+              </a>
+            </div>
+          </div>
+          <div class="vocab__word">
+            <img src="img/goodbye.jpg" alt="Goodbye" />
+            <div class="vocab__btns">
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-feather-alt"></i> ᐁᑯᓯ ᒫᑲ
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-language"></i> êkosi mâka
+              </a>
+              <a href="#!" class="vocab__btn">
+                <i class="fas fa-font"></i> Well, that's it / So long, later
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <footer>&copy; 2101-FSA-RM-WEB-FT</footer>
+      </section>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/8e3ca733ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="actions.js"></script>
+  </body>
+</html>

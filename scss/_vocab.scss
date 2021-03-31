@@ -1,0 +1,97 @@
+.vocab {
+  padding-bottom: 2rem;
+
+  &__syllabics-image {
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url('https://apihtawikosisan.com/wp-content/uploads/2013/02/childrens_book-05-dec-2010-3.jpg')
+        center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__words {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  // this is for the colored overlay that will appear when you hover over a project item
+  &__word {
+    position: relative;
+    border-bottom: 10px solid $secondary-color;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    // this is the overlay for each vocab word
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+      @include transition-ease;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
+      // this is to make the vocab word "button" only appear when you hover over it
+      .vocab__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  // target individual button
+  &__btn {
+    opacity: 0;
+    color: set-text-color($secondary-color);
+    @include transition-ease;
+
+    &:hover {
+      // this sets the text color to black instead of the normal secondary-color of white because it's wrapping it, but when you hover over the actual text, it changes to white
+      color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+
+  footer {
+    transform: rotate(90deg) translate(-3rem, -5rem);
+  }
+}
